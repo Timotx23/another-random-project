@@ -1,0 +1,69 @@
+[
+    {
+      "id": 1,
+      "priority": 200,
+      "action": { "type": "allow" },
+      "condition": {
+        "requestDomains": ["youtube.com", "www.youtube.com", "youtu.be"],
+        "resourceTypes": ["main_frame"]
+      }
+    },
+    {
+      "id": 2,
+      "priority": 200,
+      "action": { "type": "allow" },
+      "condition": {
+        "requestDomains": ["whatsapp.com", "www.whatsapp.com", "web.whatsapp.com"],
+        "resourceTypes": ["main_frame"]
+      }
+    },
+  
+    {
+      "id": 10,
+      "priority": 150,
+      "action": { "type": "redirect", "redirect": { "extensionPath": "/blocked.html" } },
+      "condition": {
+        "urlFilter": "||kinky.nl",
+        "resourceTypes": ["main_frame"]
+      }
+    },
+  
+    {
+      "id": 20,
+      "priority": 120,
+      "action": { "type": "redirect", "redirect": { "extensionPath": "/blocked.html" } },
+      "condition": {
+        "regexFilter": "https?://[^\\s/]+/.*(\\bxxx\\b|\\bporn\\b|\\bhentai\\b|\\bnsfw\\b|\\bnude\\b|\\berotic\\b|\\bsex\\b).*",
+        "resourceTypes": ["main_frame"]
+      }
+    },
+  
+    {
+      "id": 21,
+      "priority": 120,
+      "action": { "type": "redirect", "redirect": { "extensionPath": "/blocked.html" } },
+      "condition": {
+        "regexFilter": "https?://[^\\s/]+/.*(\\bcasino\\b|\\bbet\\b|\\bpoker\\b|\\bslots\\b|sportsbook|bookmaker).*",
+        "resourceTypes": ["main_frame"]
+      }
+    },
+  
+    {
+      "id": 30,
+      "priority": 110,
+      "action": { "type": "redirect", "redirect": { "extensionPath": "/blocked.html" } },
+      "condition": {
+        "requestDomains": [
+          "instagram.com", "www.instagram.com",
+          "tiktok.com", "www.tiktok.com",
+          "facebook.com", "www.facebook.com",
+          "x.com", "www.x.com",
+          "twitter.com", "www.twitter.com",
+          "snapchat.com", "www.snapchat.com",
+          "reddit.com", "www.reddit.com"
+        ],
+        "resourceTypes": ["main_frame"]
+      }
+    }
+  ]
+  

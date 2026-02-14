@@ -1,14 +1,12 @@
 {
     "manifest_version": 3,
-    "name": "Block bad websites",
+    "name": "Motivational Blocker",
     "version": "1.0.0",
-    "description": "This extension will be used to block shitty websites",
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "permissions": [],
-    "host_permissions": [],
-    "background": {
-      "service_worker": "service_worker.js"
+    "permissions": ["declarativeNetRequest"],
+    "host_permissions": ["<all_urls>"],
+    "declarative_net_request": {
+      "rule_resources": [
+        { "id": "ruleset_1", "enabled": true, "path": "rules.json" }
+      ]
     }
   }
