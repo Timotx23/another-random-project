@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "My First Extension",
+    "version": "1.0.0",
+    "description": "Example Chrome extension",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": [],
+    "host_permissions": [],
+    "background": {
+      "service_worker": "service_worker.js"
+    }
+  }
