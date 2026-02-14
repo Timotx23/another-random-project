@@ -5,8 +5,20 @@
     "permissions": ["declarativeNetRequest"],
     "host_permissions": ["<all_urls>"],
     "declarative_net_request": {
-      "rule_resources": [
-        { "id": "ruleset_1", "enabled": true, "path": "rules.json" }
-      ]
-    }
+      "rule_resources": [{ "id": "ruleset_1", "enabled": true, "path": "rules.json" }]
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["blocked.html"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["youtube_shorts_blocker.js"],
+        "run_at": "document_start"
+      }
+    ]
   }
+  

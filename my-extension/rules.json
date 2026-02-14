@@ -17,6 +17,18 @@
         "resourceTypes": ["main_frame"]
       }
     },
+    {
+        "id": 100,
+        "priority": 300,
+        "action": {
+          "type": "redirect",
+          "redirect": { "extensionPath": "/blocked.html" }
+        },
+        "condition": {
+          "regexFilter": "^https://(www\\.)?youtube\\.com/shorts(/.*)?$",
+          "resourceTypes": ["main_frame"]
+        }
+      },
   
     {
       "id": 10,
@@ -60,7 +72,8 @@
           "x.com", "www.x.com",
           "twitter.com", "www.twitter.com",
           "snapchat.com", "www.snapchat.com",
-          "reddit.com", "www.reddit.com"
+          "reddit.com", "www.reddit.com",
+          "youtube.com/shorts"
         ],
         "resourceTypes": ["main_frame"]
       }
